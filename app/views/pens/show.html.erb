@@ -1,0 +1,7 @@
+<h1><%= @pen.name_of_company %></h1>
+<p><%= @pen.ink_colour %></p>
+<p><%= @pen.no_of_pens %></p>
+<ul>
+  <li><%= link_to "Edit", edit_pen_path(@pen) %>
+  <li><%= link_to "Destroy", pen_path(@pen), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+</ul>

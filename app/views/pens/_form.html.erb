@@ -1,0 +1,30 @@
+<%= form_with model: pen do |form| %>
+    <div>
+      <%= form.label :name_of_company %><br>
+      <%= form.text_field :name_of_company %>
+      <% @pen.errors.full_messages_for(:name_of_company).each do |message| %>
+      <div><%= message %></div>
+      <% end %>
+    </div>
+  
+    <div>
+      <%= form.label :ink_colour %><br>
+      <%= form.text_area :ink_colour %>
+      <% @pen.errors.full_messages_for(:ink_colour).each do |message| %>
+      <div><%= message %></div>
+      <% end %>
+    </div>
+  
+    <div>
+    <%= form.label :no_of_pens %><br>
+    <%= form.text_area :no_of_pens %>
+    <% @pen.errors.full_messages_for(:no_of_pens).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+    </div>
+  
+    <div>
+      <%= form.submit %>
+    </div>
+  
+  <% end %>

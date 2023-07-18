@@ -1,0 +1,10 @@
+<h1>Stationary</h1>
+<ul>
+  <% @pens.each do |article| %>
+    <li>
+        <%= link_to article.name_of_company,article %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "New Pen", new_pen_path %>
